@@ -1,0 +1,62 @@
+@import '_vars';
+
+body {
+    background: url('/images/hero-img-1.jpg') center no-repeat;
+    margin: 0 auto;
+    max-width: 1920px;
+    padding: 40px;
+}
+
+h1, h2, h3 { 
+    color: $heading-color;
+    font-family: 'Staatliches', Arial, sans-serif;
+}
+
+p {
+    color: $main-color;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+a {
+    font-family: 'Staatliches', Arial, sans-serif;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.571);
+    font-size: 16px;
+}
+
+button {
+    background-color: rgba(235, 235, 235, 0.92);
+    padding: 10px;
+    border-radius: 5px;
+    transition-duration: 1s;
+}
+
+button:hover {
+    transform: scale(0.9);
+}
+
+.itemsCon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+@import 'modules/_footer';
+
+@media screen and (min-width: 720px) {
+    body {
+        background-image: url('/images/hero-img-2.jpg');
+    }
+}
+
+@media screen and (min-width: 1208px) {
+    body {
+        background-image: url('/images/hero-img-3.jpg');
+    }
+}
