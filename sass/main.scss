@@ -5,6 +5,7 @@ body {
     background-position: top center;
     background-color: black;
     max-width: 1920px;
+    height: 100%;
 }
 
 .mainCon {
@@ -22,6 +23,7 @@ h1, h2, h3 {
 p {
     color: $main-color;
     font-family: 'Josefin Sans', sans-serif;
+    transition-duration: 3s;
 }
 
 h1 {
@@ -36,7 +38,7 @@ h1:hover {
     filter: blur(2px);
 }
 
-a {
+.modelLink {
     font-family: 'Staatliches', Arial, sans-serif;
     text-decoration: none;
     color: rgb(12, 12, 12);
@@ -46,10 +48,38 @@ a {
     border-radius: 5px;
     transition-duration: 1s;
     width: 75px;
+    display: block;
 }
 
 a:hover {
     filter: brightness(150%);
+}
+
+.mainNav a:hover {
+    opacity: .5;
+}
+
+.mainNav {
+    margin-top: 50px;
+    margin-left: -60px;
+    display: none;
+}
+
+.mainNav ul {
+    list-style-type: none;
+}
+
+.mainNav a {
+    font-family: 'Josefin Sans', sans-serif;
+    text-decoration: none;
+    color: $main-color;
+    border: solid white 2px;
+    padding: 5px;
+    transition-duration: .7s;
+}
+
+.mainNav li {
+    margin: 20px;
 }
 
 h2 {
@@ -93,6 +123,7 @@ h2 {
 @media screen and (min-width: 720px) {
     body {
         background: url('/images/hero-img-2.jpg') no-repeat;
+        background-color: black;
         background-position: top center;
     }
 
@@ -109,6 +140,27 @@ h2 {
     .textCon {
         width: 480px;
     }
+
+    .mainNav {
+        display: block;
+    }
+
+    .modelLink {
+        display: none;
+    }
+}
+
+.modelsCon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.modelsCon img {
+    margin: 30px;
+    opacity: 1;
+    height: 200px;
+    width: 200px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -127,6 +179,11 @@ h2 {
 
     .imageCon {
         display: block;
+    }
+
+    .modelsCon img {
+        height: 210px;
+        width: 210px;
     }
 
     .objectCon {
@@ -150,10 +207,11 @@ h2 {
 
     body {
         background: url('/images/hero-img-3.jpg') no-repeat;
+        background-color: black;
         background-position: top center;
     }
 
-    img {
+    img, .modelsCon img {
         height: 310px;
         width: 310px;
     }
