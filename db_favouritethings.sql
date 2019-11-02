@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Oct 30, 2019 at 09:30 PM
+-- Generation Time: Nov 02, 2019 at 05:47 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.3.8
 
@@ -19,6 +19,30 @@ SET time_zone = "+00:00";
 --
 -- Database: `db_favouritethings`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_models`
+--
+
+CREATE TABLE `tbl_models` (
+  `ID` int(10) NOT NULL,
+  `ModelID` int(10) DEFAULT NULL,
+  `ModelName` varchar(50) NOT NULL,
+  `Old` varchar(150) DEFAULT NULL,
+  `New` varchar(150) DEFAULT NULL,
+  `Current` varchar(150) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tbl_models`
+--
+
+INSERT INTO `tbl_models` (`ID`, `ModelID`, `ModelName`, `Old`, `New`, `Current`) VALUES
+(1, 1, 'Umbrellas', 'markers.jpeg', 'fbi.jpeg', 'ghost.jpeg'),
+(2, 2, 'Pokers', 'rusty.jpeg', 'sword.jpeg', 'vanhalen.jpeg'),
+(3, 3, 'Pinballs', 'pachiko.jpeg', 'kansas.jpeg', 'pacific.jpeg');
 
 -- --------------------------------------------------------
 
@@ -40,13 +64,19 @@ CREATE TABLE `tbl_weapons` (
 --
 
 INSERT INTO `tbl_weapons` (`ID`, `Name`, `Image`, `Description`, `Pros`, `Cons`) VALUES
-(1, 'A Black Umbrella', 'umbrella.jpeg', 'It doesn\'t necessarily have to be black. The colour is just for aesthetic purposes. But growing up a strange fear of umbrellas (and penguins but they\'re the same, really), one realizes what a dangerous weapon an umbrella can be. Bullets and arrows are nothing against an androids metal coated body but pull out a black, angry-bird-looking umbrella and brandish it at it\'s face, the startle is enough to give you time to run.', 'Rainy? Sunny? Your umbrella\'s got your back!', 'There is a possibility your umbrella might get stuck and you just stand there looking awkward in front of a killer android.'),
+(1, 'A Black Umbrella', 'umbrella.jpeg', 'It doesn\'t necessarily have to be black. The colour is just for aesthetic purposes. But growing up with a strange fear of umbrellas (and penguins but they\'re the same, really), one realizes what a dangerous weapon an umbrella can be. Bullets and arrows are nothing against an androids metal coated body but pull out a black, angry-bird-looking umbrella and brandish it at it\'s face, the startle is enough to give you time to run.', 'Rainy? Sunny? Your umbrella\'s got your back!', 'There is a possibility your umbrella might get stuck and you just stand there looking awkward in front of a killer android.'),
 (2, 'A Slightly Hot Fireplace Poker', 'poker.jpeg', 'Owning a poker is like holding a Royal Flush. It has a sharp end, it has a blunt end, what else could you ask for? This object is your best friend when you\'re out there camping in the apocalypse and you have a fire in contrast to the frigid nights and you need to keep the it going. On an occasion where an android creeps up behind you, just turn around whack it in the face with Fire Poker 2000.', 'You can toast your marshmallows with it.', 'You\'ll have to wash it first.'),
 (3, 'A Classic Pinball Machine', 'pinball.jpeg', 'It\'s the end of the world, there\'s no  house parties or music festivals or arcades. What do you do when you\'re bored? Go the old fashioned way with a pinball (or a pac-man) machine. The game never gets over and there\'s always room for improvement. It can be a weapon because the androids\' sensors are damaged by the dings and zaps of the machine. You can also use it as an obstacle to block out the androids in a situation where a wave of them are after you.', 'Your high-school classmates high score stands as a purpose of life for you.', 'UPS won\'t deliver it.');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `tbl_models`
+--
+ALTER TABLE `tbl_models`
+  ADD PRIMARY KEY (`ID`);
 
 --
 -- Indexes for table `tbl_weapons`
@@ -57,6 +87,12 @@ ALTER TABLE `tbl_weapons`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `tbl_models`
+--
+ALTER TABLE `tbl_models`
+  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tbl_weapons`
