@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
 
     sql.query(query, (err, result) => {
         if (err) { throw err; console.log(err); }
-
+        console.log(result);
         res.render('home', { data: result });
     })
 })
@@ -20,7 +20,7 @@ router.get('/:id', (req, res) => {
     console.log('At a dynamic route.');
     console.log(req.params.id)
     
-        let query = `SELECT * FROM tbl_weapons WHERE weaponID="${req.params.id}"`;
+        let query = `SELECT * FROM tbl_weapons WHERE ID="${req.params.id}"`;
 })
 
 module.exports = router;
