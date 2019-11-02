@@ -1,23 +1,18 @@
 <div class="itemsCon">
-        <!-- loop through all our team members and put their info on the page -->
-        {{!-- exactly like a forEach loop with plain js --}}
         {{#each data}}
             <div class="objectCon">
-                {{!-- <img class="itemImg" src="images/{{ Image }}" alt="favourite thing"> --}}
-                <h2>{{ Name }}</h2>
-                <p>{{ Description }}</p>
-                <a class="modelLink" href="{{ ID }}">Models >>></a>
-            </div>
-            <div class="prosconsCon">
-                <div class="pros"><h3>Pros</h3><p>{{ Pros }}</p></div>
-                <div class="cons"><h3>Cons</h3><p>{{ Cons }}</p></div>
+                <div class="textCon">
+                    <h2>{{ Name }}</h2>
+                    <p>{{ Description }}</p>
+                    <a class="modelLink" href="At the Models page of Item No. {{ ID }}">Models >>></a>
+                    <div class="prosconsCon">
+                        <div class="pros"><h3>Pros</h3><p>{{ Pros }}</p></div>
+                        <div class="cons"><h3>Cons</h3><p>{{ Cons }}</p></div>
+                    </div>
+                </div>
+                <div class="imageCon">
+                    <img src="images/{{ Image }}" alt="favourite thing">
+                </div>
             </div>
         {{/each}}
-
-        {{#each data}}
-
-            <p>{{ classes }}</p>
-
-        {{/each}}
-
     </div>
